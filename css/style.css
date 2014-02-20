@@ -1,0 +1,12 @@
+.output{
+	min-height:100px;
+}
+#message{
+	color:red;
+}
+#main{
+	background-color:#E6E6E6;
+}
+#header{
+	height:100px;
+}

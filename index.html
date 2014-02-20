@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="javascripts/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="javascripts/StringToArray.js"></script>
+	<script type="text/javascript" src="javascripts/dictionnary.js"></script>
+	<script type="text/javascript" src="javascripts/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12" id="header">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+			</div>
+			<div class="col-md-6" id="main">
+				<h1>Welcome on the string to Ascii web tool !</h1>
+				<p class="lead" id="message"></p>
+				<h3 class="text-muted">Input 14 (Char max)</h3>
+				<textarea class="form-control" rows="3" placeholder="Text here... [A..Z]" name="input" id="input" onKeyUp="checkInput(this.value);" maxlength=14></textarea>
+				<h3 class="text-muted">Ouput</h3>
+				<!-- <textarea class="form-control" rows="5" name="output" id="output"></textarea> -->
+					<pre class="output" id="output">						
+					</pre>				
+			</div>
+			<div class="col-md-3">
+			</div>	 
+		</div>
+	</div>
+</body>
+</html>
