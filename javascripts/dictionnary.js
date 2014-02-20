@@ -27,3 +27,9 @@ asciiRef = {
 	"y" : " _  _  \\ \\/ /  \\  /    \\_\\  ",
 	"z" : " _____ |__  /  /   / |_____|"
 };
+
+			/* on recupere les clef du tableau asciiref*/
+dictionnaryKey = new Array();
+for (key in asciiRef){
+	dictionnaryKey.push(key);
+}

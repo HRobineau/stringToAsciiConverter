@@ -8,41 +8,7 @@
 
 
 */
-asciiRef = {
-	" " : "                            ",
-	"a" : "   _     / \\   / _ \\ /_/ \\_\\",
-	"b" : " ___   |___|  |    \\ |____/ ",
-	"c" : " _____ |  ___|| |___ |_____|",
-	"d" : " ____  |  _ \\ | |_| ||____/ ",
-	"e" : " _____ |  __ ||  __| |_____|",
-	"f" : " _____ |  __ ||  __| |__|   ",
-	"g" : " _____ |  __ || |_ \\ |_____|",
-	"h" : " _   _ | |_| ||  _  ||_| |_|",
-	"i" : " _____ |_   _| _| |_ |_____|",
-	"j" : " _____ |_   _| _| |  |___|  ",
-	"k" : "",
-	"l" : " _     | |    | |___ |_____|",
-	"m" : " _   _ | \\ / ||  v  ||_| |_|",
-	"n" : " _   _ | \\ | || |\\| ||_| \\_|",
-	"o" : " _____ |  _  || |_| ||_____|",
-	"p" : " _____ |  _  ||  ___||_|    ",
-	"q" : " _____ |     ||  O  ||___\\_\\",
-	"r" : " _____ |  _  ||     ||__|\\_\\",
-	"s" : " _____ |  ___||_____  _____|",
-	"t" : " _____ |_   _|  | |    |_|  ",
-	"u" : " _   _ | | | || |_| ||_____|",
-	"v" : " _   _ | | | |\\ \\ / / \\___/ ",
-	"w" : " _   _ | | | ||  A  ||_/ \\_|",
-	"x" : " _  _  \\ \\/ /  \\  /  /_/\\_\\ ",
-	"y" : " _  _  \\ \\/ /  \\  /    \\_\\  ",
-	"z" : " _____ |__  /  /   / |_____|"
-};
-			/* on recupere les clef du tableau asciiref*/
-			var dictionnaryKey = new Array();
-		      	for (key in asciiRef)
-		    	{
-		          dictionnaryKey.push(key);
-		       	}
+
 
 		/* This function return in console the ascii equivalent for the string paramater "chaine" */
 		function prettyPrint(ascii){
@@ -67,21 +33,12 @@ asciiRef = {
 			var mySplitWord = aWord.split("");
 			var wordLength = aWord.length;
 			var myBuiltWord = "";
-			for(var i=0;i<aWord.length;i++){
-				myBuiltWord += asciiRef[mySplitWord[i]].substring(0,7)+"  ";
-			}
-			myBuiltWord+= "\n";
-			for(var i=0;i<aWord.length;i++){
-				myBuiltWord += asciiRef[mySplitWord[i]].substring(7,14)+"  ";
-			}
-			myBuiltWord+= "\n";
-			for(var i=0;i<aWord.length;i++){
-				myBuiltWord += asciiRef[mySplitWord[i]].substring(14,21)+"  ";
-			}
-			myBuiltWord+= "\n";
-			for(var i=0;i<aWord.length;i++){
-				myBuiltWord += asciiRef[mySplitWord[i]].substring(21,28)+"  ";
-			}
+			for(var j=1;j<5;j++){
+				for(var i=0;i<aWord.length;i++){
+					myBuiltWord += asciiRef[mySplitWord[i]].substring((j-1)*7,j*7)+"  ";
+				}
+				myBuiltWord+= "\n";
+			}	
 			return myBuiltWord;
 		}
 
